@@ -8,6 +8,6 @@ echo "Cleaning up intermediate files"
 [ -e ${PACKAGE_FILE} ] && rm ${PACKAGE_FILE}
 
 echo "Building Lambda deployment package"
-zip ${PACKAGE_FILE} ${LAMBDA_SOURCE}
+zip a ${PACKAGE_FILE} ${LAMBDA_SOURCE}
 
 echo "Done!"

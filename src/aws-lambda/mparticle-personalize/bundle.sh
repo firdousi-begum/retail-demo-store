@@ -12,6 +12,6 @@ echo "Cleaning up intermediate files"
 npm ci 
 
 echo "Adding Lambda function source code to package"
-zip -gr ${PACKAGE_FILE} ${LAMBDA_SOURCE} package.json node_modules
+zip a -r ${PACKAGE_FILE} ${LAMBDA_SOURCE} package.json node_modules
 
 echo "Done!"

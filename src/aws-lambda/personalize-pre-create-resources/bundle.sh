@@ -13,11 +13,11 @@ pip install -r requirements.txt --target ./package
 
 echo "Building Lambda deployment package"
 cd package
-zip -r9 ${OLDPWD}/${PACKAGE_FILE} .
+zip a -r -mx9 ${OLDPWD}/${PACKAGE_FILE} .
 cd ${OLDPWD}
 
 echo "Adding Lambda function source code to package"
-zip -g ${PACKAGE_FILE} ${LAMBDA_SOURCE}
-zip -g ${PACKAGE_FILE} delete_dataset_groups.py
+zip u ${PACKAGE_FILE} ${LAMBDA_SOURCE}
+zip u ${PACKAGE_FILE} delete_dataset_groups.py
 
 echo "Done!"

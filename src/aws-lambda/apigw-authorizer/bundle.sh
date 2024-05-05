@@ -12,9 +12,9 @@ echo "Installing Lambda dependencies"
 npm install
 
 echo "Building Lambda deployment package"
-zip -r9 ${PACKAGE_FILE} node_modules
+zip a -r -mx9 ${PACKAGE_FILE} node_modules
 
 echo "Adding Lambda function source code to package"
-zip -g ${PACKAGE_FILE} ${LAMBDA_SOURCE}
+zip u ${PACKAGE_FILE} ${LAMBDA_SOURCE}
 
 echo "Done!"

@@ -9,6 +9,6 @@ echo "Cleaning up intermediate files"
 [ -e "package" ] && rm -rf package
 
 echo "Adding Lambda function source code to package"
-zip -g ${PACKAGE_FILE} ${LAMBDA_SOURCE}
+zip u ${PACKAGE_FILE} ${LAMBDA_SOURCE}
 
 echo "Done!"

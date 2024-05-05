@@ -12,7 +12,7 @@ echo "Copying Pinpoint message templates"
 cp -R ../../../workshop/4-Messaging/pinpoint-templates .
 
 echo "Building Lambda deployment package"
-zip ${PACKAGE_FILE} ${LAMBDA_SOURCE}
-zip -gr ${PACKAGE_FILE} pinpoint-templates
+zip a ${PACKAGE_FILE} ${LAMBDA_SOURCE}
+zip u -r ${PACKAGE_FILE} pinpoint-templates
 
 echo "Done!"
